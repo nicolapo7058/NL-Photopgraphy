@@ -3,6 +3,14 @@
     <style>
         body {
             font-family: "Courier", "Courier New", monospace;
+            @keyframes rotazione {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.rotante {
+    animation: rotazione 5s linear infinite;
+}
         }
     </style>
 </head>
@@ -16,7 +24,7 @@
     height: 100vh;
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentazione Personale</title>
+    <title>Nicolapo</title>
     <style>
         body { font-family: Arial, sans-serif;background-color: #f4f4f4; }
         header { background-color: #333; color: #fff; padding: 1em; text-align: center; }
@@ -28,6 +36,7 @@
     <header>
         <h1> nicolapo </h1>
         <p>Fotografo</p>
+        <img src="mmi.jpg" style="width:auto;"> </picture>
     </header>
     <nav>
         <a href="#about">Chi sono</a>
@@ -40,15 +49,21 @@
     </section>
 
         <h2>Competenze</h2>
-        <ul>
+  
+       <div class="transizione">
+ <ul>
             <li>Fotografia</li>
             <li>Most Amazing operas</li>
             <li>graphic design</li>
             <li>comunicazione visiva</li>
+     border: 1px solid black;
+width: 100px;
+height: 100px;
+transition: width 2s;
         </ul>
 
     </section>
-
+  transform: rotateX(100deg);
         <h2>Contatti</h2>
         <p>Email: lapopetitta100@gmail.com <p>
 
