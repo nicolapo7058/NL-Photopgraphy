@@ -1,141 +1,462 @@
+<!DOCTYPE html>
 <html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
 
-body {
-  
-        header { background-color: #; color: #000000; padding: 1em; text-align: center; }
- 
-h1, h2, h3 { color: #000000; }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    background-image: url(https://github.com/nicolapo7058/sito2/blob/main/images/360_F_496970947_bDivG3q9zCWbvQ58x0FpXOg6ryT8ykZd.jpg);
-  background-size: cover;
-  background-position: center;
-}
+    body {
+      
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #111;
+      color: #fff;
+      line-height: 2.5;
+       min-height: 100vh;
+    }
 
-        p {
-       
-     font-family: cursive;
-        background-color: #116062; 
-        color: white;
-        padding: 30px;
-        text-align: center;
-        font-size: 20px;
-      }
-     h1, h2, h3, h4, h5, h6 {
-   
-            border: 2px solid #4CAF50; 
-            padding: 10px 20px; 
-            background-color: #e7f7e7; 
-            margin: 10px 0; 
-       
-       font-family: Arial, sans-serif; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-       nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-         
-       ul { font-family: 'Blackletter', 'Garamond', sans-serif;
-        background-color: #000000; 
-        color: white;
-        padding: 20px;
-        margin: 15px 0;
-        border-radius: 10px; 
-         font-size: 18px;}
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 40px;}
-       
-{
-  background-image: url("C:\Users\ACME\Desktop\Aosta-Arco-dAugusto-Foto-di-Andrea-Cozza.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    .navbar .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .navbar .logo-area img {
+      height: 40px;
+      width: auto;
+    }
+
+    .navbar .logo-area .site-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar .nav-links a {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('hero-image.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+
+    /* Collaborazioni Speciali */
+    .chisono {
+      padding: 4rem 2rem;
+      background-color: #1a1a1a;
+    }
+
+    .chisono h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .chisono .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .chisono .grid-item {
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .chisono .grid-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+
+    .dimezzo p {
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 1.5rem;
   text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
   color: white;
+  background-color: #fff;
+  border-radius: 30px;
+  
 }
+      
+    .FOTOGOLOSE h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 7rem;
+    }
+  
+     .slideshow-container {
+      position: relative;
+      width: 10000px;
+      max-width: 100%;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      z-index: 10;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .arrow:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+ .GRAFICAZIONE h4 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 7rem;
+    }
+  
+     .slideshow-container2 {
+      position: relative;
+      width: 10000px;
+      max-width: 100%;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      z-index: 10;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .arrow :hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .arrow .left {
+      left: 10px;
+    }
+
+    .arrow .right {
+      right: 10px;
+    }
+
+ .contact-box { 
+  
+  align-items: center;     
+  min-height: 100vh;      
+   margin: 0 auto;
+   background-color: #222;
+   padding: 2rem;
+   border-radius: 12px;
+   max-width: 500px;
+   width: 100%;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-box h6 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .contact-box form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-box button {
+      padding: 0.75rem;
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-box button:hover {
+      background-color: #e6b800;
+    }
+
+    .privacy {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .privacy a {
+      color: #ffcc00;
+      text-decoration: underline;
+    } 
 
 
-    </style>
+    /* Footer */
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar .nav-links {
+        display: none;
+      }
+    }
+ 
+  </style>
 </head>
-
-<link rel="stylesheet" href="style.css">
-    <div class="finestra">
 <body>
   
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <nav class="navbar">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo">
+      <div class="site-name">Nicolapo</div>
+    </div>
+    <div class="nav-links">
+      <a href="#">Chi sono?!</a>
+      <a href="#">Fotografia</a>
+      <a href="#">Graphic design</a>
+      <a href="#">Servizi</a>
+      <a href="#">Contatti</a>
+    </div>
+  </nav>
 
-    <header>
-        <h1> Nicolapo, graficare e fotografare in modo dinamico </h1>
-        <p>Fotografo e Graphic designer</p>
+  <section class="hero">
+    <div>
+      <h1>Graficare e fotografare alla maniera di Nicolapo </h1>
+    </div>
+  </section>
 
-    </header>
-    <nav>
-        <a href="#about">Chi sono</a>
-        <a href="#skills">Competenze</a>
-        <a href="#contact">Contatti</a>
-    </nav>
+  <section class="chisono">
+    <h2>Di chi parliamo qui?!</h2>
+    <div class="grid">
+      <div class="grid-item">
+        <img src="collab1.jpg" alt="foto fotografo">
+        <p>Nicolapo il fotografo</p>
+      </div>
+      <div class="grid-item">
+        <img src="collab2.jpg" alt="foto grafico">
+        <p>Nicolapo il grafico</p>
+      </div>
       
-    <section id="about">
-        <h2>Chi sono</h2>
-        <p>Io sono Nicolapo, fotografo sensazioni e anche quelle che non riesci a percepire.</p>
-      <p>Come graphic designer inoltre sappi che mi puoi affidare qualsiasi incarico e se hai problemi con impaginazioni, con grafiche e in generale lavori di comunicazione visiva, ci sarò per te ;) .</p>
+    </div>
+  </section>
+   <section class="dimezzo">
+     <p> Due personalità in una stessa persona che mi rendono DECISAMENTE PAZZO per quello che faccio. </p>
+      
+     <p> Se mi vorrai al tuo fianco come fotografo ti giuro che ti caccerò da dentro una miriade di idee per qualsiasi diamine di scatto che ti verrà in mente. </p>
+      
+       
+    <p>   Se sceglierai il mio lato più "Pettinato" da designer, sono a disposizione per le grafiche del tuo brand, della tua azienda o per qualsiasi progetto pazzurdo che vorrai ;) </p>
+      </section>
+    
+  <section>
+    <section class FOTOGOLOSE>
+      <h3> Best foto che vedrai oggi</h3>
+      <div class="slideshow-container">
+  <div class="slide active"><img src="img1.jpg" alt="Foto 1"></div>
+  <div class="slide"><img src="img2.jpg" alt="Foto 2"></div>
+  <div class="slide"><img src="img3.jpg" alt="Foto 3"></div>
+         <div class="slide"><img src="img4.jpg" alt="Foto 4"></div>
+         <div class="slide"><img src="img5.jpg" alt="Foto 5"></div>
+  <button class="arrow left" onclick="changeSlide(-1)">&#8592;</button>
+  <button class="arrow right" onclick="changeSlide(1)">&#8594;</button>
+</div>
+      <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>
+    </section>
+    
+    <section>
+    <section class GRAFICAZIONE>
+      <h4> Ottimi lavori succosi, di vari tipi</h4>
+      <div class="slideshow-container2">
+  <div class="slide active"><img src="img1.jpg" alt="Foto 1"></div>
+  <div class="slide"><img src="img2.jpg" alt="Foto 2"></div>
+  <div class="slide"><img src="img3.jpg" alt="Foto 3"></div>
+         <div class="slide"><img src="img4.jpg" alt="Foto 4"></div>
+         <div class="slide"><img src="img5.jpg" alt="Foto 5"></div>
+  <button class="arrow left" onclick="changeSlide(-1)">&#8592;</button>
+  <button class="arrow right" onclick="changeSlide(1)">&#8594;</button>
+</div>
+      <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>
     </section>
       
-        <h3>Competenze</h3>
+      <section>
+  <div class="contact-box">
+    <h6>Contattaci</h6>
+    <form action="#" method="POST">
+      <input type="text" name="nome" placeholder="Il tuo nome" required>
+      <input type="email" name="email" placeholder="La tua email" required>
+      <textarea name="messaggio" rows="5" placeholder="Scrivici un messaggio..." required></textarea>
+      <button type="submit">Invia Messaggio</button>
+    </form>
+    <div class="privacy">
+      Inviando accetti le nostre <a href="privacy.html" target="_blank">politiche sulla privacy</a>.
+    </div>
+  </div>
+      </section>
       
- <ul>
-            <li>L'idea di Fotografia</li>
-     <img src=""C:\Users\ACME\Desktop\Aosta-Arco-dAugusto-Foto-di-Andrea-Cozza.jpg"" style="width:auto;"
-            <img src="mmi.jpg" style="width:auto;"
-     <img src="mmi.jpg" style="width:auto;"
-            <img src="mmi.jpg" style="width:auto;"
-     <img src="mmi.jpg" style="width:auto;"
-            <li>migliori lavori fotografici</li>
-            <li>graphic design</li>
-        </ul>
+     
+      
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nicolapo. Tutti i diritti riservati.</p>
+  </footer>
 
- <h4>I Miei Servizi</h4>
-  <p>Offro una varietà di servizi fotografici personalizzati, pensati per soddisfare ogni tua esigenza. Ecco alcuni dei servizi che offro:</p>
-  <ul>
-    <li>Ritratti individuali e di famiglia</li>
-    <li>Fotografia di eventi aziendali e conferenze</li>
-    <li>Fotografia di moda e editoriale</li>
-    <li>Servizi fotografici per prodotti e pubblicità</li>
-    <li>Realizzazione di loghi per aziende, gruppi, artisti...</li>
-    <li>Creazione grafiche per aziende, gruppi, artisti</li>
-    <li>realizzazione copertine di ogni genere</li>
-  </ul>
-
-  <p>Ogni servizio è pensato per catturare l'autenticità e l'emozione del momento, con un approccio professionale e personalizzato.</p>
-</section>
-
-  <h5>Portfolio</h5>
-  <p>Esplora alcune delle mie migliori fotografie, che rappresentano la mia passione, il mio stile e il mio impegno per ogni singolo scatto.
-IMMAGINI CON SLIDER </p>
-
-<section class="my-process">
-  <h2>Il Mio Processo</h2>
-  <p>Ogni servizio fotografico è personalizzato in base alle tue esigenze. Ecco come lavoriamo insieme:</p>
-  <ul>
-    <li><strong>Consultazione iniziale:</strong> Ci incontriamo per discutere le tue idee e desideri, e capire come posso realizzare la tua visione.</li>
-    <li><strong>Shooting:</strong> Il giorno del servizio fotografico, mi assicurerò che tu ti senta a tuo agio mentre catturo ogni momento speciale.</li>
-    <li><strong>Post-produzione:</strong> Lavorerò sulle foto per perfezionarle e renderle davvero uniche, mantenendo intatta la loro bellezza naturale.</li>
-    <li><strong>Consegna:</strong> Ti fornirò le foto finali in alta risoluzione, pronte per essere utilizzate o stampate.</li>
-  </ol>
-</section>
-
-<h6>Contatti</h6>
-
-  <p> linkedin @nicolapo
-  <p>Email: lapopetitta100@gmail.com 
-
-
-
-</body>
-</html>
 </body>
 </html>
