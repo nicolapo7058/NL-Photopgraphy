@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
-
+    
     
     * {
       margin: 0;
@@ -26,7 +26,6 @@
       text-decoration: none;
     }
 
-    /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -70,9 +69,9 @@
       color: #ffcc00;
     }
 
-    /* Hero Section */
+ 
     .hero {
-      background: url('hero-image.jpg') center/cover no-repeat;
+      background: url(https://github.com/nicolapo7058/sito2/blob/main/images/cdevrbrvrvrvrvrvrv.jpg?raw=true) center/cover no-repeat;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -82,7 +81,7 @@
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       margin-bottom: 1rem;
     }
 
@@ -92,10 +91,9 @@
     }
 
 
-    /* Collaborazioni Speciali */
     .chisono {
       padding: 4rem 2rem;
-      background-color: #1a1a1a;
+      background-color: #000000;
     }
 
     .chisono h2 {
@@ -123,8 +121,11 @@
       margin-bottom: 1rem;
     }
 
-
+.dimezzo {
+  background-color: #000000;
+}
     .dimezzo p {
+      
   max-width: 930px;
   margin: 0 auto;
   padding: 1.5rem;
@@ -132,15 +133,16 @@
   font-size: 1.5rem;
   line-height: 1.5;
   color: white;
-  background-color: #fff;
   border-radius: 30px;
   
 }
       
     .FOTOGOLOSE h3 {
       text-align: center;
+      margin-top: 2rem;
+      background-color: #FFC000;
       margin-bottom: 2rem;
-      font-size: 7rem;
+      font-size: 3rem;
     }
   
      .slideshow-container {
@@ -197,68 +199,52 @@
       right: 10px;
     }
 
- .GRAFICAZIONE h4 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 7rem;
-    }
+.contenitore-box2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 6rem;
+  flex-wrap: wrap;
+}
+
+
+.graphic{
+ background-color: #000000;
+}
+.graphic p {
+        
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  color: white;
+  border-radius: 10px;
   
-     .slideshow-container2 {
-      position: relative;
-      width: 10000px;
-      max-width: 100%;
-      height: 500px;
-      overflow: hidden;
-      border-radius: 20px;
-    }
+}
+.box2 {
 
-    .slide {
-      display: none;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
+  width: 300px;
+  height: 300px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
 
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+.box2:hover {
+  transform: scale(1.05);
+}
 
-    .active {
-      display: block;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2.5rem;
-      color: white;
-      background: rgba(0, 0, 0, 0.5);
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      z-index: 10;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    .arrow :hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    .arrow .left {
-      left: 10px;
-    }
-
-    .arrow .right {
-      right: 10px;
-    }
+.box2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
  .contact-box { 
-  
   align-items: center;     
   min-height: 100vh;      
    margin: 0 auto;
@@ -271,6 +257,7 @@
     }
 
     .contact-box h6 {
+      font-size: 2rem;
       text-align: center;
       margin-bottom: 1rem;
     }
@@ -316,7 +303,7 @@
     } 
 
 
-    /* Footer */
+  
     footer {
       background-color: #000;
       text-align: center;
@@ -324,8 +311,8 @@
       font-size: 0.9rem;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
+
+ @media (max-width: 768px) {
       .navbar .nav-links {
         display: none;
       }
@@ -337,15 +324,14 @@
   
   <nav class="navbar">
     <div class="logo-area">
-      <img src="images/Risorsa 1logogiallo.png" alt="Logo">
+       <img src="https://github.com/nicolapo7058/sito2/blob/main/images/rRisorsa%201logogiallo.png?raw=true" alt="Logo" width="150">
       <div class="site-name">Nicolapo</div>
     </div>
     <div class="nav-links">
-      <a href="#">Chi sono?!</a>
-      <a href="#">Fotografia</a>
-      <a href="#">Graphic design</a>
-      <a href="#">Servizi</a>
-      <a href="#">Contatti</a>
+      <a href="#chisonon">Chi sono?!</a>
+      <a href="#dimezzon">Fotografia</a>
+      <a href="#graficn">Graphic design</a>
+      <a href="#contn">Contatti</a>
     </div>
   </nav>
 
@@ -356,37 +342,38 @@
   </section>
 
   <section class="chisono">
-    <h2>Di chi parliamo qui?!</h2>
+    <h2 id="chisonon">Di chi parliamo qui?!</h2>
     <div class="grid">
       <div class="grid-item">
-        <img src="collab1.jpg" alt="foto fotografo">
+        <img src="https://github.com/nicolapo7058/sito2/blob/main/images/nlf.png?raw=true" alt="foto fotografo">
         <p>Nicolapo il fotografo</p>
       </div>
       <div class="grid-item">
-        <img src="collab2.jpg" alt="foto grafico">
+        <img src="https://github.com/nicolapo7058/sito2/blob/main/images/graf.jpg?raw=true" alt="foto grafico">
         <p>Nicolapo il grafico</p>
       </div>
       
     </div>
   </section>
    <section class="dimezzo">
-     <p> Due personalità in una stessa persona che mi rendono DECISAMENTE PAZZO per quello che faccio. </p>
+     <p id="dimezzon"> Due personalità in una stessa persona che mi rendono DECISAMENTE PAZZO per quello che faccio. </p>
       
      <p> Se mi vorrai al tuo fianco come fotografo ti giuro che ti caccerò da dentro una miriade di idee per qualsiasi diamine di scatto che ti verrà in mente. </p>
       
        
-    <p>   Se sceglierai il mio lato più "Pettinato" da designer, sono a disposizione per le grafiche del tuo brand, della tua azienda o per qualsiasi progetto pazzurdo che vorrai ;) </p>
+    <p>   Se sceglierai il mio lato più "Pettinato" da designer, sono a disposizione per le grafiche del tuo brand, della tua azienda o per qualsiasi progetto pazzurdo che vorrai ;) <br>
+     </br>
+     </p>
       </section>
-    
   <section>
-    <section class FOTOGOLOSE>
+    <section class="FOTOGOLOSE">
       <h3> Best foto che vedrai oggi</h3>
       <div class="slideshow-container">
-  <div class="slide active"><img src="img1.jpg" alt="Foto 1"></div>
-  <div class="slide"><img src="img2.jpg" alt="Foto 2"></div>
-  <div class="slide"><img src="img3.jpg" alt="Foto 3"></div>
-         <div class="slide"><img src="img4.jpg" alt="Foto 4"></div>
-         <div class="slide"><img src="img5.jpg" alt="Foto 5"></div>
+  <div class="slide active"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/AMOEDNWq%20DAI.jpg?raw=true" alt="Foto 1"></div>
+  <div class="slide"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/artd3.jpg?raw=true" alt="Foto 2"></div>
+  <div class="slide"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/day12.jpg?raw=true" alt="Foto 3"></div>
+         <div class="slide"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/bibib.png?raw=true" alt="Foto 4"></div>
+         <div class="slide"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/binari%20sul%20mare.jpg?raw=true" alt="Foto 5"></div>
   <button class="arrow left" onclick="changeSlide(-1)">&#8592;</button>
   <button class="arrow right" onclick="changeSlide(1)">&#8594;</button>
 </div>
@@ -407,38 +394,31 @@
 </script>
     </section>
     
-    <section>
-    <section class GRAFICAZIONE>
-      <h4> Ottimi lavori succosi, di vari tipi</h4>
-      <div class="slideshow-container2">
-  <div class="slide active"><img src="img1.jpg" alt="Foto 1"></div>
-  <div class="slide"><img src="img2.jpg" alt="Foto 2"></div>
-  <div class="slide"><img src="img3.jpg" alt="Foto 3"></div>
-         <div class="slide"><img src="img4.jpg" alt="Foto 4"></div>
-         <div class="slide"><img src="img5.jpg" alt="Foto 5"></div>
-  <button class="arrow left" onclick="changeSlide(-1)">&#8592;</button>
-  <button class="arrow right" onclick="changeSlide(1)">&#8594;</button>
+<section class="graphic">
+  <p id="graficn"> Ed eccoci al mio lato grafico... Qui ci sono 3 link che ti porteranno ad alcune tipologie di miei progetti, come l'impaginazione grafica per agenzie turistiche, grafiche e modellazione blender e infine grafica editoriale. Non ci manca nulla insomma. </p>
+    <div class="contenitore-box2">
+  <div class="box2">
+    <a href="https://www.instagram.com/nicolapo_" target="_blank">
+      <img src="https://github.com/nicolapo7058/sito2/blob/main/images/5E9.jpg?raw=true" alt="Comune di Riomaggiore">
+    </a>
+  </div>
+  <div class="box2">
+    <a href="https://www.instagram.com/nicolapo_" target="_blank">
+      <img src="https://github.com/nicolapo7058/sito2/blob/main/Catturaren5brrebrebrere.JPG?raw=true" alt="progetti blender">
+    </a>
+  </div>
+  <div class="box2">
+    <a href="https://www.instagram.com/nicolapo_" target="_blank">
+      <img src="https://github.com/nicolapo7058/sito2/blob/main/images/w%20vwevwevew.JPG?raw=true" alt="Progetti editoriali">
+    </a>
+  </div>
 </div>
-      <script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-  }
-
-  function changeSlide(direction) {
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
-</script>
-    </section>
-      
+  </section>
+    
+    
       <section>
   <div class="contact-box">
-    <h6>Contattaci</h6>
+    <h6 id="contn">Contatti</h6>
     <form action="#" method="POST">
       <input type="text" name="nome" placeholder="Il tuo nome" required>
       <input type="email" name="email" placeholder="La tua email" required>
@@ -450,10 +430,7 @@
     </div>
   </div>
       </section>
-      
-     
-      
-  <!-- Footer -->
+
   <footer>
     <p>&copy; 2025 Nicolapo. Tutti i diritti riservati.</p>
   </footer>
