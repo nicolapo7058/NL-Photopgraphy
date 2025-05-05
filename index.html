@@ -71,7 +71,7 @@
 
  
     .hero {
-      background: url(https://github.com/nicolapo7058/sito2/blob/main/images/cdevrbrvrvrvrvrvrv.jpg?raw=true) center/cover no-repeat;
+      background: url(/images/cdevrbrvrvrvrvrvrv.jpg?raw=true) center/cover no-repeat;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -328,7 +328,7 @@
   
   <nav class="navbar">
     <div class="logo-area">
-       <img src="https://github.com/nicolapo7058/sito2/blob/main/images/rRisorsa%201logogiallo.png?raw=true" alt="Logo" width="150">
+       <img src="/images/rRisorsa%201logogiallo.png?raw=true" alt="Logo" width="150">
       <div class="site-name">Nicolapo</div>
     </div>
     <div class="nav-links">
@@ -349,11 +349,11 @@
     <h2 id="chisonon">Di chi parliamo qui?!</h2>
     <div class="grid">
       <div class="grid-item">
-        <img src="https://github.com/nicolapo7058/sito2/blob/main/images/nlf.png?raw=true" alt="foto fotografo">
+        <img src="/images/nlf.png?raw=true" alt="foto fotografo">
         <p>Nicolapo il fotografo</p>
       </div>
       <div class="grid-item">
-        <img src="https://github.com/nicolapo7058/sito2/blob/main/images/rRisorsa%203nlnlsddd.png?raw=true" alt="foto grafico">
+        <img src="/images/rRisorsa%203nlnlsddd.png?raw=true" alt="foto grafico">
         <p>Nicolapo il grafico</p>
       </div>
       
@@ -373,11 +373,11 @@
     <section class="FOTOGOLOSE">
       <h3> Best foto che vedrai oggi</h3>
       <div class="slideshow-container">
-  <div class="slide active"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/AMOEDNWq%20DAI.jpg?raw=true" alt="Foto 1"></div>
-  <div class="slide"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/artd3.jpg?raw=true" alt="Foto 2"></div>
-  <div class="slide"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/day12.jpg?raw=true" alt="Foto 3"></div>
-         <div class="slide"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/bibib.png?raw=true" alt="Foto 4"></div>
-         <div class="slide"><img src="https://github.com/nicolapo7058/sito2/blob/main/images/binari%20sul%20mare.jpg?raw=true" alt="Foto 5"></div>
+  <div class="slide active"><img src="/images/AMOEDNWq%20DAI.jpg?raw=true" alt="Foto 1"></div>
+  <div class="slide"><img src="/images/artd3.jpg?raw=true" alt="Foto 2"></div>
+  <div class="slide"><img src="/images/day12.jpg?raw=true" alt="Foto 3"></div>
+         <div class="slide"><img src="/images/bibib.png?raw=true" alt="Foto 4"></div>
+         <div class="slide"><img src="/images/binari%20sul%20mare.jpg?raw=true" alt="Foto 5"></div>
   <button class="arrow left" onclick="changeSlide(-1)">&#8592;</button>
   <button class="arrow right" onclick="changeSlide(1)">&#8594;</button>
 </div>
@@ -403,17 +403,17 @@
     <div class="contenitore-box2">
   <div class="box2">
     <a href="https://www.instagram.com/nicolapo_" target="_blank">
-      <img src="https://github.com/nicolapo7058/sito2/blob/main/images/5E9.jpg?raw=true" alt="Comune di Riomaggiore">
+      <img src="/images/5E9.jpg?raw=true" alt="Comune di Riomaggiore">
     </a>
   </div>
   <div class="box2">
     <a href="https://www.instagram.com/nicolapo_" target="_blank">
-      <img src="https://github.com/nicolapo7058/sito2/blob/main/Catturaren5brrebrebrere.JPG?raw=true" alt="progetti blender">
+      <img src="/Catturaren5brrebrebrere.JPG?raw=true" alt="progetti blender">
     </a>
   </div>
   <div class="box2">
     <a href="https://www.instagram.com/nicolapo_" target="_blank">
-      <img src="https://github.com/nicolapo7058/sito2/blob/main/images/w%20vwevwevew.JPG?raw=true" alt="Progetti editoriali">
+      <img src="/images/w%20vwevwevew.JPG?raw=true" alt="Progetti editoriali">
     </a>
   </div>
 </div>
@@ -426,14 +426,16 @@
     <form action="#" method="POST">
       <input type="text" name="nome" placeholder="Il tuo nome" required>
       <input type="email" name="email" placeholder="La tua email" required>
-      <textarea name="messaggio" rows="5" placeholder="Scrivici un messaggio..." required></textarea>
+      <textarea name="messaggio" rows="5" placeholder="Scrivimi un messaggio..." required></textarea>
       <button type="submit">Invia Messaggio</button>
     </form>
-    <div class="privacy">
-      Inviando accetti le nostre <a href="privacy.html" target="_blank">politiche sulla privacy</a>.
-    </div>
+    <label>
+  <input type="checkbox" name="privacy" required>
+  Ho letto l'<a href="URL_privacy_policy" target="_blank" rel="noopener noreferrer">informativa sulla privacy</a> e acconsento al trattamento dei miei dati personali.
+</label>
   </div>
       </section>
+
 
   <footer>
     <p>&copy; 2025 Nicolapo. Tutti i diritti riservati.</p>
