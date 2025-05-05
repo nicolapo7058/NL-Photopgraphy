@@ -398,23 +398,7 @@
       <a href="#graficn">Graphic design</a>
       <a href="#contn">Contatti</a>
     </div>
-   <script> let prevScrollpos = window.pageYOffset; // posizione di scorrimento precedente
-const navbar = document.querySelector('.navbar'); // seleziona la navbar
-
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset; // posizione di scorrimento attuale
-
-  if (prevScrollpos > currentScrollPos) {
-    // Se l'utente sta scorrendo verso l'alto, mostra la navbar
-    navbar.style.top = "0";
-  } else {
-    // Se l'utente sta scorrendo verso il basso, nasconde la navbar
-    navbar.style.top = "-60px"; // Puoi regolare questo valore in base all'altezza della navbar
-  }
-
-  prevScrollpos = currentScrollPos; // aggiorna la posizione di scorrimento
-};
-   </script>
+  
   </nav>
 
   <section class="hero">
@@ -519,5 +503,22 @@ window.onscroll = function() {
     <p>&copy; 2025 Nicolapo. Tutti i diritti riservati.</p>
   </footer>
 
+     <script> let prevScrollpos = window.pageYOffset; // posizione di scorrimento precedente
+const navbar = document.querySelector('.navbar'); // seleziona la navbar
+
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset; // posizione di scorrimento attuale
+
+  if (prevScrollpos > currentScrollPos) {
+    // Se l'utente sta scorrendo verso l'alto, mostra la navbar
+    navbar.style.top = "0";
+  } else {
+    // Se l'utente sta scorrendo verso il basso, nasconde la navbar
+    navbar.style.top = "-60px"; // Puoi regolare questo valore in base all'altezza della navbar
+  }
+
+  prevScrollpos = currentScrollPos; // aggiorna la posizione di scorrimento
+};
+   </script>
 </body>
 </html>
