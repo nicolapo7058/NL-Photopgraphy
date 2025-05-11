@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     
-    {
+    
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -58,25 +59,69 @@
     }
 
     .navbar .nav-links a {
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: 500;
-      transition: color 0.3s;
+    
     }
 
-    .navbar .nav-links a:hover {
-      color: #ffcc00;
+  .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin-left: 10px;
+          color: #FF0000;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+      display: block;
+      text-transform: uppercase;
+    
+    }
+
+    .navbar ul li a:hover {
+      background-color: #fec81f;
+      border-radius: 2px;
+     
     }
 
     .menu-toggle {
       display: none;
-      float: right;
-      padding: 14px 20px;
-      font-size: 20px;
+      font-size: 24px;
       color: white;
-      background-color: #333;
+      background: none;
       border: none;
       cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+      }
+
+      .navbar ul.show {
+        display: flex;
+      }
+
+      .navbar ul li {
+        margin: 0;
+        border-top: 1px solid #444;
+      }
+
+      .navbar ul li a {
+        padding: 12px 20px;
+      }
     }
  
     .hero {
@@ -324,26 +369,7 @@
       font-size: 0.9rem;
     }
 
-  @media screen and (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .navbar-links.active {
-        display: flex;
-      }
-
-      .navbar a {
-        float: none;
-        width: 100%;
-      }
-}
+  
 
   .hero h1 {
     font-size: 2rem;
@@ -401,21 +427,20 @@
        <img src="/images/rRisorsa%201logogiallo.png?raw=true" alt="Logo" width="150">
       <div class="site-name">Nicolapo</div>
     </div>
-    <div class="nav-links">
-      <a href="#chisonon">Chi sono?!</a>
-      <a href="#dimezzon">Fotografia</a>
-      <a href="#graficn">Graphic design</a>
-      <a href="#contn">Contatti</a>
-    </div>
+    <ul id="nav-links">
+      <li>  <a href="#chisonon">Chi sono?!</a> </li>
+      <li>  <a href="#dimezzon">Fotografia</a> </li>
+      <li>  <a href="#graficn">Graphic design</a> </li>
+      <li>  <a href="#contn">Contatti</a> </li>
+    </ul>
   </nav>
          
-  <script>
+   <script>
     function toggleMenu() {
-      const navbarLinks = document.getElementById('navbarLinks');
-      navbarLinks.classList.toggle('active');
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
     }
   </script>
-
   <section class="hero">
     <div>
       <h1>Graficare e fotografare alla maniera di Nicolapo </h1>
