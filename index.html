@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     
-    
-    * {
+    {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -69,6 +68,16 @@
       color: #ffcc00;
     }
 
+    .menu-toggle {
+      display: none;
+      float: right;
+      padding: 14px 20px;
+      font-size: 20px;
+      color: white;
+      background-color: #333;
+      border: none;
+      cursor: pointer;
+    }
  
     .hero {
       background: url(/images/cdevrbrvrvrvrvrvrv.jpg?raw=true) center/cover no-repeat;
@@ -315,27 +324,26 @@
       font-size: 0.9rem;
     }
 
+  @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
 
-@media (max-width: 768px) {
-  /* Navbar verticale */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
 
-  .navbar .nav-links {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-    gap: 1rem;
-  }
+      .navbar-links.active {
+        display: flex;
+      }
 
-  .navbar .nav-links a {
-    padding: 0.5rem 0;
-    border-top: 1px solid #333;
-    width: 100%;
-  }
+      .navbar a {
+        float: none;
+        width: 100%;
+      }
+}
 
   .hero h1 {
     font-size: 2rem;
@@ -388,6 +396,7 @@
 <body>
   
   <nav class="navbar">
+     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <div class="logo-area">
        <img src="/images/rRisorsa%201logogiallo.png?raw=true" alt="Logo" width="150">
       <div class="site-name">Nicolapo</div>
@@ -398,8 +407,14 @@
       <a href="#graficn">Graphic design</a>
       <a href="#contn">Contatti</a>
     </div>
-        <div class="menu-toggle">&#9776;</div> <!-- Unicode per l'icona hamburger -->
   </nav>
+         
+  <script>
+    function toggleMenu() {
+      const navbarLinks = document.getElementById('navbarLinks');
+      navbarLinks.classList.toggle('active');
+    }
+  </script>
 
   <section class="hero">
     <div>
@@ -503,22 +518,6 @@
     <p>&copy; 2025 Nicolapo. Tutti i diritti riservati.</p>
   </footer>
 
-     <script> let prevScrollpos = window.pageYOffset; // posizione di scorrimento precedente
-const navbar = document.querySelector('.navbar'); // seleziona la navbar
-
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset; // posizione di scorrimento attuale
-
-  if (prevScrollpos > currentScrollPos) {
-    // Se l'utente sta scorrendo verso l'alto, mostra la navbar
-    navbar.style.top = "0";
-  } else {
-    // Se l'utente sta scorrendo verso il basso, nasconde la navbar
-    navbar.style.top = "-60px"; // Puoi regolare questo valore in base all'altezza della navbar
-  }
-
-  prevScrollpos = currentScrollPos; // aggiorna la posizione di scorrimento
-};
-   </script>
+    
 </body>
 </html>
