@@ -1,4 +1,4 @@
-# Pubblicazione interessante di nicolapo
+# Pubblicazione Foto-grafica di Nicolapo
 
 ## Dati accademici
   - ACME Novara : anno accademico 2024-2025 
@@ -8,5 +8,5 @@
   
   ## Indirizzo di pubblicazione netlify
 
-    Il mio progetto web per un sito ipoteticamente utilizzabile in futuro è linkato qui sotto
+    Il mio progetto web per un sito da fotografo e grafico utilizzabile in futuro è linkato qui sotto
 ## (https://nicolapo2.netlify.app/)
