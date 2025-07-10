@@ -30,6 +30,4 @@ Si tratta di un pittogramma artigianale, NL dalle iniziali dei miei due nomi lav
 Oltre alla descrizione di alcune scelte di codice, sono presenti i risultati oltre che del validatore w3c, del PageSpeedInsights di Google.
 
 # Indirizzo di pubblicazione netlify
-
-    Il mio progetto web per un sito da fotografo e grafico utilizzabile in futuro è linkato qui sotto
-## (https://nicolapo2.netlify.app/)
+ (https://nicolapo2.netlify.app/)
