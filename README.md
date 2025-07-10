@@ -17,19 +17,19 @@ Il tema è descrivere il mio lavoro come fotografo e grafico così come tutti i 
   
 Contiene quindi slideshow, immagini e una navbar di suddivisione dei contenuti, oltre a una serie di link visivi cliccabili e un modulo di contatto alla fine della pagina.
 
-# Le immagini
+## Le immagini
 Tutte le immagini sono scattate da me con una NikonD90:
 
 - per ottimizzare il caricamento della pagina alcune più pesanti sono in webp
 - sono presenti dei contenuti di cui ho chiesto autorizzazione d'uso ai miei clienti
 
-# Il logo
+## Il logo
 Si tratta di un pittogramma artigianale, NL dalle iniziali dei miei due nomi lavorato con un font originale, l'omonimo NL
 
-# Cenni sulla presentazione
+## Cenni sulla presentazione
 Oltre alla descrizione di alcune scelte di codice, sono presenti i risultati oltre che del validatore w3c, del PageSpeedInsights di Google.
 
-## Indirizzo di pubblicazione netlify
+# Indirizzo di pubblicazione netlify
 
     Il mio progetto web per un sito da fotografo e grafico utilizzabile in futuro è linkato qui sotto
 ## (https://nicolapo2.netlify.app/)
